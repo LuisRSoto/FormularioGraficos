@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Gráficos</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Formulario de Gráficos</h1>
+    <div class="left">
+      <select name="tipo" id="tipo">
+        <option value="bar">Gráfico de Barras</option>
+        <option value="line">Gráfico de Líneas</option>
+        <option value="pie">Gráfico Circular</option>
+        <option value="doughnut">Gráfico de Dona</option>
+        <option value="radar">Gráfico de Radar</option>
+      </select>
+      <input type="text" placeholder="Título del Gráfico" id="titulo">
+      <div class="datos" id="datos">
+        <div class="dato">
+          <input type="text" placeholder="Leyenda 1" class="serie">
+          <input type="number" placeholder="Valor 1" class="valor">
+        </div>
+        <div class="dato">
+          <input type="text" placeholder="Leyenda 2" class="serie">
+          <input type="number" placeholder="Valor 2" class="valor">
+        </div>
+      </div>
+      <div class="buttons">
+        <button onclick="agregarDato()" class="agregar"> + </button>
+        <button onclick="cargarGrafico()" class="crear-grafico">Crear Gráfico</button>
+        <button onclick="limpiarCampos()" class="limpiar">Limpiar Campos</button>
+      </div>
+    </div>
+    <div class="right">
+      <canvas id="chartCanvas"></canvas>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #18936f;
+    font-size: 24px;
+}
+
+.left {
+    flex: 1 1 300px;
+    padding: 20px;
+    background-color: #e9f5f1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.left select,
+.left input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.left .dato {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.left .dato input {
+    flex: 1;
+}
+
+.left .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left .agregar,
+.left .crear-grafico,
+.limpiar,
+.eliminar {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.left .agregar {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.left .agregar:hover {
+    background-color: #138496;
+}
+
+.left .crear-grafico {
+    background-color: #28a745;
+    color: white;
+}
+
+.left .crear-grafico:hover {
+    background-color: #218838;
+}
+
+.limpiar {
+    background-color: #dc3545;
+    color: white;
+}
+
+.limpiar:hover {
+    background-color: #c82333;
+}
+
+.eliminar {
+    width: 30px;
+    height: 30px;
+    background-color: #ffcc00;
+    color: #333;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .eliminar:hover {
+    background-color: #e6b800;
+  }
+
+.right {
+    flex: 2 1 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .right {
+        order: -1;
+    }
+}
